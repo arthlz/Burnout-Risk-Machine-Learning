@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #23242a;
+}
+
+.box {
+    position: relative;
+    width: 480px;
+    height: 480px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(0deg, transparent, transparent,
+            #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(0deg, transparent, transparent,
+            #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.borderLine {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.borderLine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(0deg, transparent, transparent,
+            #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animateInverse 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.borderLine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(0deg, transparent, transparent,
+            #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animateInverse 6s linear infinite;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateInverse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.box .resultado {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+}
+.box .resultado .titulo {
+    color: #fff;
+    font-weight: 550;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-top: -35px;
+}
+
+.box .resultado .titulo-h3{
+    color: #45f3ff;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.box .resultado #valor-burnout{
+    color: #ff2770;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff2770;
+    display: block;
+    margin: 5px 0;
+}
+
+.box .resultado #status-risco{
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.box .resultado #resultado-container{
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.box .resultado .btn-nova-consulta {
+    padding: 10px 10px;
+    width: 150px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+}
+
+.box .resultado .btn-nova-consulta::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.box .resultado .btn-nova-consulta::before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #48ff00,
+            #00ffd5, #002bff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.box .resultado .btn-nova-consulta:hover::before {
+    opacity: 1;
+}
+
+.box .resultado .btn-nova-consulta:active::after {
+    background: transparent;
+}
+
+.box .resultado .btn-nova-consulta:active {
+    color: #000;
+    font-weight: bold;
+}
