@@ -113,6 +113,10 @@ O projeto foi concebido como um produto preditivo com separação entre backend,
 
 ## Como executar o projeto
 
+   ```
+   Todo o código foi produzido e funcionou localmente no python 3.13.5
+   ```
+
 Forma 1 (back-end + front_end): 
 
 1. Clone o repositório:
@@ -121,20 +125,28 @@ Forma 1 (back-end + front_end):
    git clone https://github.com/arthlz/Burnout-Risk-Machine-Learning
    ```
 
-2. Clique na pasta Front_end+Back_end, acesse o arquivo Back_End.ipynb e clique em run all:
+2. Clique na pasta Front_end+Back_end, acesse o arquivo Back_End.ipynb e execute-o:
 
    ```py
    ├── 📂 Front-end+Back_end/            # Interface do usuário e integração
-    │   ├── 📂 CSS/                       # Estilização (style-consultar e style-resultado)
-    │   ├── 📂 HTML/                      # Estrutura das páginas (consultar e resultado)
-    │   ├── 📂 JS/                        # Lógica de interação (script.js)
-    │   └── 📓 Back_End.ipynb             # Integração e lógica de servidor
+   │   ├── 📂 CSS/                       # Estilização (style-consultar e style-resultado)
+   │   ├── 📂 HTML/                      # Estrutura das páginas (consultar e resultado)
+   │   ├── 📂 JS/                        # Lógica de interação (script.js)
+   │   └── 📓 Back_End.ipynb             # Integração e lógica de servidor
    ```
-3. Acesse o Development server gerado:
+3. Clique na pasta HTML e execute o consultar.html (Recomendo baixar a extensão ***live server*** e abrir o html por ela):
 
    ```py
-   http://127.0.0.1:5000
+   ├── 📂 Front-end+Back_end/             
+   │   ├── 📂 CSS/                       
+   │   ├── 📂 HTML/                      
+   │       ├── 📓 consultar.html         # Execute esse arquivo.
+   │       ├── 📓 resultado.html   
+   │   ├── 📂 JS/                        
+   │   └── 📓 Back_End.ipynb            
    ```
+
+Se não funcionar, tente da segunda forma:
 
 Forma 2 (Localmente no terminal):
 
@@ -145,14 +157,14 @@ Forma 2 (Localmente no terminal):
      ```
   
   2. Acesse o arquivo modelo_burnout.ipynb
-      ```py
-      ├── 📂 Front-end+Back_end/            # Interface do usuário e integração
-      │   ├── 📂 CSS/                       # Estilização (style-consultar e style-resultado)
-      │   ├── 📂 HTML/                      # Estrutura das páginas (consultar e resultado)
-      │   ├── 📂 JS/                        # Lógica de interação (script.js)
-      │   └── 📓 Back_End.ipynb             # Integração e lógica de servidor
-      ```
-    
+        ```text
+      ├── 📂 Data/                          
+      ├── 📂 Front-end+Back_end/            
+      ├── 📂 Teste dos modelos/                           
+      ├── 📄 modelo_burnout_final.pkl       
+      ├── 📓 Modelo_burnout.ipynb           # Execute esse arquivo
+      └── 📄 README.md                      
+      ```  
   
   3. Selecione o kernel Python Environment Python 3.13.5 e clique em run all:
      ```
