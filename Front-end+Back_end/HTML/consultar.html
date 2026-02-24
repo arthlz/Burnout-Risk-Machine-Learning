@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Nivel de Burnout</title>
+    <link rel="stylesheet" href="../CSS/style-consultar.css">
+    <script src="../JS/script.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <span class="borderLine"></span>
+        <form class="consultar" id="formConsultar">
+            <h1 class="titulo">Consultar Nivel de Burnout</h1>
+            <div class="inputBox">
+                <input type="text" name="user" id="user" required>
+                <span>Nome</span>
+                <i></i>
+            </div>
+            <div class="inputBox selectBox">
+                <select name="genero" id="genero" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Feminino</option>
+                </select>
+                <span>Gênero</span>
+                <i></i>
+            </div>
+            <div class="inputBox selectBox">
+                <select name="tipo_empresa" id="tipo_empresa" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="s">Service</option>
+                    <option value="p">Product</option>
+                </select>
+                <span>Tipo de Empresa</span>
+                <i></i>
+            </div>
+            <div class="inputBox selectBox">
+                <select name="home_office" id="home_office" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="s">Sim</option>
+                    <option value="n">Não</option>
+                </select>
+                <span>Home Office</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="nivel_cargo" id="nivel_cargo" required>
+                <span>Nível do Cargo (0 a 5)</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="horas_trabalho" id="horas_trabalho" required>
+                <span>Horas de Trabalho (1.0 a 10.0)</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="fadiga_mental" id="fadiga_mental" required>
+                <span>Fadiga Mental (0.0 a 10.0)</span>
+                <i></i>
+            </div>
+            <button type="submit" class="consultar_btn" id="btn-consultar">Consultar</button>
+        </form>
+    </div>
+</body>
+
+</html>
