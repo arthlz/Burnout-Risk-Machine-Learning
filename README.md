@@ -116,7 +116,16 @@ O projeto foi concebido como um produto preditivo com separação entre backend,
    ```
    Todo o código foi produzido e funcionou localmente no python 3.13.5
    ```
-
+Antes de qualquer uma das formas: no terminal, crie um ambiente virtual e ative-o
+   ```Venv
+    python -m venv venv <- Cria o ambiente virtual
+   
+    - Dispositivos Windows:
+    .\venv\Scripts\activate -< Ativa o ambiente virtual
+   
+    - Dispositivos Linux/Mac:
+    source venv/bin/activate <- Ativa o ambiente virtual
+   ```
 Forma 1 (back-end + front_end): 
 
 1. Clone o repositório:
